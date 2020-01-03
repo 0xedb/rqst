@@ -23,13 +23,16 @@ const style = (
     }
   `}</style>
 );
+
+const LOGO = `rqst<-`;
+
 const Navbar = ({ children }: Props) => {
   return (
     <>
       <nav>
         <div className="logo">
           <Link href="#">
-            <a>rqst&lt;-</a>
+            <a>{LOGO}</a>
           </Link>
         </div>
         {children}

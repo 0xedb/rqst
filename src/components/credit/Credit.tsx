@@ -12,7 +12,7 @@ const style = (
 const Credit = ({ href, desc }: Credit) => {
   return (
     <>
-      <a className="credit" href={href}>
+      <a className="credit" href={href} rel="noreferrer noopener">
         {desc}
       </a>
       {style}
