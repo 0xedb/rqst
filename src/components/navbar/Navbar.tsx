@@ -6,6 +6,8 @@ const style = (
       width: 100%;
       background: #e0dede;
       z-index: 20;
+      display: flex;
+      align-items: center;
     }
   `}</style>
 );

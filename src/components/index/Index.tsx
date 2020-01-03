@@ -10,16 +10,23 @@ const style = (
       display: flex;
       flex-flow: column nowrap;
       align-items: center;
+      justify-content: center;
     }
     .lozad {
-      background-blend-mode: color-burn;
-      background: wheat;
+      mix-blend-mode: multiply;
       width: 90%;
+    }
+
+    .background {
+      margin: 3%;
+      display: flex;
+      justify-content: center;
     }
 
     @media (min-width: 920px) {
       #index {
         flex-flow: row nowrap;
+        justify-content: unset;
       }
     }
   `}</style>
@@ -29,7 +36,7 @@ const Index = () => {
   return (
     <>
       <div id="index">
-        <div>
+        <div className="background">
           <img data-src="/images/people.svg" className="lozad" alt="people" />
         </div>
         <div>two</div>
