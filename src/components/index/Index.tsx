@@ -7,16 +7,23 @@ const Index = () => {
   useLozad();
   return (
     <div id="index">
-      <div className="background">
-        <img data-src="/images/people.svg" className="lozad" alt="people" />
-        <Credit
-          href="https://www.freepik.com/free-photos-vectors/people"
-          desc="People vector created by pikisuperstar - www.freepik.com"
-        />
-      </div>
-      <div>
-        <LoginForm />
-      </div>
+      <section className="index-content">
+        <div className="background">
+          <img
+            data-src="/images/people.svg"
+            id="people"
+            className="lozad"
+            alt="people"
+          />
+          <Credit
+            href="https://www.freepik.com/free-photos-vectors/people"
+            desc="People vector created by pikisuperstar - www.freepik.com"
+          />
+        </div>
+        <div>
+          <LoginForm />
+        </div>
+      </section>
     </div>
   );
 };

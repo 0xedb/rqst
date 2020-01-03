@@ -13,6 +13,7 @@ nav {
   padding-left: 20px;
   font-family: "Fira Code", monospace;
   transition: all 0.5s ease;
+  font-size: medium;
 }
 
 .logo:hover {
@@ -21,4 +22,11 @@ nav {
 
 .logo a {
   text-decoration: none;
+}
+
+
+@media(min-width: 920px) {
+  .logo {
+    font-size: x-large;
+  }
 }
