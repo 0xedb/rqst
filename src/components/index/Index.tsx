@@ -1,5 +1,6 @@
 import { useLozad } from "../../hooks/lozad";
 import Credit from "../credit/Credit";
+import LoginForm from "../login/LoginForm";
 
 const style = (
   <style jsx>{`
@@ -44,7 +45,9 @@ const Index = () => {
             desc="People vector created by pikisuperstar - www.freepik.com"
           />
         </div>
-        <div>two</div>
+        <div>
+          <LoginForm />
+        </div>
       </div>
       {style}
     </>

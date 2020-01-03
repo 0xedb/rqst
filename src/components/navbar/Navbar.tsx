@@ -4,17 +4,25 @@ const style = (
       position: fixed;
       height: 50px;
       width: 100%;
-      background: #e0dede;
+      background: #fffffffa;
+      box-shadow: 0px 6px 20px #0000000f;
       z-index: 20;
       display: flex;
       align-items: center;
+    }
+
+    .logo {
+      padding-left: 20px;
     }
   `}</style>
 );
 const Navbar = ({ children }: Props) => {
   return (
     <>
-      <nav>hello{children}</nav>
+      <nav>
+        <div className="logo">hello</div>
+        {children}
+      </nav>
       {style}
     </>
   );

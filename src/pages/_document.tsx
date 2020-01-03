@@ -4,7 +4,7 @@ import Document, {
   Main,
   NextScript,
   DocumentContext
-} from "next/document";
+} from "next/document"; 
 
 class RqstDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -17,6 +17,7 @@ class RqstDocument extends Document {
       <Html>
         <Head>
           <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+          <link rel="stylesheet" type="text/css" href="/css/antd.css" />
         </Head>
         <body>
           <Main />
