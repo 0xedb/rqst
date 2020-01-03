@@ -1,10 +1,16 @@
- 
+import Page from "../components/page/Page";
+import Head from "next/head";
+import Index from "../components/index/Index";
+
 const index = () => {
   return (
-    <div>
-      hello
-    </div>
+    <Page>
+      <Head>
+        <title>Rqst::Requesting...</title>
+      </Head>
+      <Index />
+    </Page>
   );
-}
+};
 
 export default index;
