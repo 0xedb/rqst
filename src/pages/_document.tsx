@@ -17,7 +17,7 @@ class RqstDocument extends Document {
       <Html>
         <Head>
           <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
-          <link rel="stylesheet" type="text/css" href="/css/antd.css" />
+          <link rel="stylesheet" type="text/css" href="/css/app.css" />
         </Head>
         <body>
           <Main />

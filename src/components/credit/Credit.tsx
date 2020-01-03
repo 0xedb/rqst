@@ -1,6 +1,6 @@
 const style = (
-  <style jsx global>{`
-    a {
+  <style jsx>{`
+    .credit {
       visibility: hidden;
       display: none;
       width: 0;
@@ -11,13 +11,13 @@ const style = (
 );
 const Credit = ({ href, desc }: Credit) => {
   return (
-    <> 
-    <a {...href}>{desc}</a>
+    <>
+      <a className="credit" href={href}>
+        {desc}
+      </a>
       {style}
     </>
   );
 };
 
-
 export default Credit;
- 

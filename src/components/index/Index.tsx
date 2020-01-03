@@ -34,7 +34,7 @@ const style = (
   `}</style>
 );
 const Index = () => {
-  useLozad("");
+  useLozad();
   return (
     <>
       <div id="index">
