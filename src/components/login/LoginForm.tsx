@@ -27,7 +27,7 @@ const LoginForm = () => {
           placeholder="hello@rqst.com"
           size="large"
           addonAfter={submit}
-          {...formik.getFieldProps('email')}
+          {...formik.getFieldProps("email")}
         />
       </Form.Item>
     </form>

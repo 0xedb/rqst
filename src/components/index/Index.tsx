@@ -20,7 +20,7 @@ const Index = () => {
             desc="People vector created by pikisuperstar - www.freepik.com"
           />
         </div>
-        <div>
+        <div className='centered'>
           <LoginForm />
         </div>
       </section>

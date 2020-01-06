@@ -3,3 +3,9 @@
 * {
   font-family: "Fira Code", monospace;
 }
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
