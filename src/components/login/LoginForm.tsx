@@ -2,14 +2,25 @@ import { Form, Input, Button } from "antd";
 import "./loginform.css";
 import { useFormik } from "formik";
 
+const validate = ({ email }: EmailValidate) => {
+  let errors: EmailValidate = {};
+  const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  if (!email) errors.email = "* required";
+  else if (!EMAIL_REGEX.test(email.toLowerCase()))
+    errors.email = "* invalid email";
+  return errors;
+};
+ 
 const LoginForm = () => {
   const formik = useFormik({
     initialValues: {
-      email: ""
+      email: "" 
     },
     onSubmit: async values => {
       console.log(values);
-    }
+    },
+    validate
   });
 
   const submit = (
@@ -29,6 +40,11 @@ const LoginForm = () => {
           addonAfter={submit}
           {...formik.getFieldProps("email")}
         />
+        <div className="error">
+          {formik.touched.email && formik.errors.email
+            ? formik.errors.email
+            : null}
+        </div>
       </Form.Item>
     </form>
   );

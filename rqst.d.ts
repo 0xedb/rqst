@@ -1,10 +1,12 @@
- 
 interface Props {
-  children?: ReactElement
+  children?: ReactElement;
 }
 
 interface Credit {
-  href: string
-  desc: string
+  href: string;
+  desc: string;
 }
 
+interface EmailValidate {
+  email?: string; 
+}

@@ -3,6 +3,11 @@
   padding: 10px;
 }
 
+.error {
+  height: 18px;
+  color: crimson;
+}
+
 @media (min-width: 920px) {
   .form {
     width: 500px;
