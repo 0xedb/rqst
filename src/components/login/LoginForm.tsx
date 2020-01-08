@@ -1,6 +1,7 @@
 import { Form, Input, Button } from "antd";
 import "./loginform.css";
 import { useFormik } from "formik";
+import { sendEmail } from '../../util/firebase'; 
 
 const validate = ({ email }: EmailValidate) => {
   let errors: EmailValidate = {};
@@ -19,6 +20,7 @@ const LoginForm = () => {
     },
     onSubmit: async values => {
       console.log(values);
+      sendEmail('daf')
     },
     validate
   });

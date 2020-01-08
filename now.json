@@ -1,0 +1,22 @@
+{
+  "name": "rqst",
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/next"
+    }
+  ],
+  "build": {
+    "env": {
+      "API_KEY": "@api_key",
+      "AUTH_DOMAIN": "@auth_domain",
+      "DB_URL": "@db_url",
+      "PROJECT_ID": "@project_id",
+      "STORE_BUCKET": "@store_bucket",
+      "MSG_SENDER": "@msg_sender",
+      "APP_ID": "@app_id",
+      "MEASUREMENT_ID": "@measurement_id"
+    }
+  }
+}
