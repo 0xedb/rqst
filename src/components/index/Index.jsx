@@ -3,7 +3,26 @@ import Credit from "../credit/Credit";
 import LoginForm from "../login/LoginForm";
 import "./index.css";
 import React from "react";
- 
+import { sendEmail } from "../../util/firebase";
+import { message } from "antd";
+
+const callback = async email => {
+  console.log("callback--", email);
+  sendEmail(email)
+    .then(() => {
+      message.success({
+        content: "email link sent",
+        duration: 7
+      });
+    })
+    .catch(err => {
+      message.error({
+        content: err.message,
+        duration: 7
+      });
+    });
+};
+
 const Index = () => {
   useLozad();
   return (
@@ -22,7 +41,7 @@ const Index = () => {
           />
         </div>
         <div className="centered">
-          <LoginForm />
+          <LoginForm {...{ callback }} />
         </div>
       </section>
     </div>

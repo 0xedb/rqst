@@ -1,7 +1,6 @@
 import { Form, Input, Button } from "antd";
 import "./loginform.css";
 import { useFormik } from "formik";
-import { sendEmail } from "../../util/firebase";
 
 import React from "react";
 
@@ -12,24 +11,24 @@ const validate = ({ email }) => {
   if (!email) errors.email = "* required";
   else if (!EMAIL_REGEX.test(email.toLowerCase()))
     errors.email = "* invalid email";
-  return errors; 
+  return errors;
 };
 
-const LoginForm = () => {
+const LoginForm = ({ callback }) => {
   const formik = useFormik({
     initialValues: {
       email: ""
     },
     onSubmit: async values => {
-      console.log(values);
-      sendEmail("daf@daf.dsad");
+      callback(values.email);
+      formik.resetForm();
     },
     validate
   });
 
   const submit = (
     <Button type="link" onClick={() => formik.submitForm()}>
-      login ->
+      login
     </Button>
   );
 
