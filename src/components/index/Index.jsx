@@ -2,7 +2,8 @@ import { useLozad } from "../../hooks/lozad";
 import Credit from "../credit/Credit";
 import LoginForm from "../login/LoginForm";
 import "./index.css";
-
+import React from "react";
+ 
 const Index = () => {
   useLozad();
   return (
@@ -20,7 +21,7 @@ const Index = () => {
             desc="People vector created by pikisuperstar - www.freepik.com"
           />
         </div>
-        <div className='centered'>
+        <div className="centered">
           <LoginForm />
         </div>
       </section>

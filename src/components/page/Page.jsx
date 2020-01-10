@@ -1,6 +1,7 @@
 import "./page.css";
+import React from "react";
 
-const Page = ({ children }: Props) => {
+const Page = ({ children }) => {
   return <div id="rqst">{children}</div>;
 };
 

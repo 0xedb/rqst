@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import lozad from "lozad";
 
-export const useLozad = (selector?: string) =>
+export const useLozad = selector =>
   useEffect(() => {
-    let el: Element;
-    let observer: lozad.Observer;
+    let el;
+    let observer;
     if (!selector) {
       observer = lozad();
     } else {

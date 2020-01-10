@@ -1,15 +1,14 @@
-import Link from "next/link";
+import { Link } from "gatsby";
 import "./navbar.css";
+import React from "react";
 
 const LOGO = `rqst<-`;
 
-const Navbar = ({ children }: Props) => {
+const Navbar = ({ children }) => {
   return (
     <nav>
       <div className="logo">
-        <Link href="#">
-          <a>{LOGO}</a>
-        </Link>
+        <Link to="#">{LOGO}</Link>
       </div>
       {children}
     </nav>

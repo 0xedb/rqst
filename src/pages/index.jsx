@@ -1,14 +1,16 @@
 import Page from "../components/page/Page";
-import Head from "next/head";
 import Index from "../components/index/Index";
 import Navbar from "../components/navbar/Navbar";
+import React from "react";
+import { Helmet } from "react-helmet";
+
 
 const index = () => {
   return (
     <Page>
-      <Head>
+      <Helmet>
         <title>Rqst::Requesting...</title>
-      </Head>
+      </Helmet>
       <Navbar />
       <Index />
     </Page>
