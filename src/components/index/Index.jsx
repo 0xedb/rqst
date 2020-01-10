@@ -7,7 +7,6 @@ import { sendEmail } from "../../util/firebase";
 import { message } from "antd";
 
 const callback = async email => {
-  console.log("callback--", email);
   sendEmail(email)
     .then(() => {
       message.success({
@@ -15,6 +14,7 @@ const callback = async email => {
         duration: 7
       });
     })
+    .then(() => window.localStorage.setItem("rqst_user", btoa(email)))
     .catch(err => {
       message.error({
         content: err.message,
