@@ -13,7 +13,7 @@ const init = () => {
     appId: process.env.APP_ID,
     measurementId: process.env.MEASUREMENT_ID
   };
-  
+
   if (!firebase.apps.length) {
     firebase.initializeApp(CONFIG);
   }
@@ -24,8 +24,9 @@ const init = () => {
   };
 };
 
+const settings = init();
+
 const sendEmail = email => {
-  const settings = init();
   return firebase.auth().sendSignInLinkToEmail(email, settings);
 };
 
