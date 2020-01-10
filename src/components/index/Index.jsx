@@ -5,6 +5,7 @@ import "./index.css";
 import React from "react";
 import { sendEmail } from "../../util/firebase";
 import { message } from "antd";
+import CONFIG from "../../util/constants";
 
 const callback = async email => {
   sendEmail(email)
@@ -14,7 +15,7 @@ const callback = async email => {
         duration: 7
       });
     })
-    .then(() => window.localStorage.setItem("rqst_user", btoa(email)))
+    .then(() => window.localStorage.setItem(CONFIG.user, btoa(email)))
     .catch(err => {
       message.error({
         content: err.message,

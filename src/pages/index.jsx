@@ -4,8 +4,7 @@ import Navbar from "../components/navbar/Navbar";
 import React from "react";
 import { Helmet } from "react-helmet";
 
-
-const index = () => {
+const Home = () => {
   return (
     <Page>
       <Helmet>
@@ -17,4 +16,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Home;

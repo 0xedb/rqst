@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
+import { useLogin } from "../hooks/redirect";
 
-const login = () => {
+function Login() {
+  const kind = useLogin();
+  console.log(kind);
   return (
     <div>
-      welcome to login
+      <div>welcome to login</div>
     </div>
   );
 }
 
-export default login;
+export default Login;
