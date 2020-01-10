@@ -28,7 +28,7 @@ const LoginForm = ({ callback }) => {
 
   const submit = (
     <Button type="link" onClick={() => formik.submitForm()}>
-      login
+      login ->
     </Button>
   );
 
