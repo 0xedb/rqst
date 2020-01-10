@@ -22,7 +22,7 @@ const LoginForm = () => {
     },
     onSubmit: async values => {
       console.log(values);
-      sendEmail("daf");
+      sendEmail("daf@daf.dsad");
     },
     validate
   });
