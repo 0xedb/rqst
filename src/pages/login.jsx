@@ -2,7 +2,7 @@ import React from "react";
 import { useLogin } from "../hooks/redirect";
 import LoginForm from "../components/login/LoginForm";
 import Page from "../components/page/Page";
-import { message } from "antd";
+import External from '../components/external/External'
 
 const mapKindToComponent = kind => {
   switch (kind.description) {
@@ -10,15 +10,7 @@ const mapKindToComponent = kind => {
       return <div>here</div>;
     case "external":
       return (
-        <Page>
-          {message.warning({
-            content: "enter your email to login",
-            duration: 8
-          })}
-          <div className="centered high">
-            <LoginForm />
-          </div>
-        </Page>
+       <External />
       );
     case "init":
       return <></>;
