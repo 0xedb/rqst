@@ -1,10 +1,11 @@
 import React from 'react';
+import Page from '../page/Page'
 
 const Form = () => {
   return (
-    <div>
+    <Page>
       form here
-    </div>
+    </Page>
   );
 }
 

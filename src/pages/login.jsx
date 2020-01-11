@@ -3,11 +3,12 @@ import { useLogin } from "../hooks/redirect";
 import LoginForm from "../components/login/LoginForm";
 import Page from "../components/page/Page";
 import External from "../components/external/External";
+import Form from '../components/form/Form'
 
 const mapKindToComponent = kind => {
   switch (kind.description) {
     case "email":
-      return <div>here</div>;
+      return <Form />;
     case "external":
       return <External />;
     case "init":
