@@ -2,16 +2,14 @@ import React from "react";
 import { useLogin } from "../hooks/redirect";
 import LoginForm from "../components/login/LoginForm";
 import Page from "../components/page/Page";
-import External from '../components/external/External'
+import External from "../components/external/External";
 
 const mapKindToComponent = kind => {
   switch (kind.description) {
     case "email":
       return <div>here</div>;
     case "external":
-      return (
-       <External />
-      );
+      return <External />;
     case "init":
       return <></>;
     default:
