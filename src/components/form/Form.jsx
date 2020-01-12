@@ -1,7 +1,7 @@
 import React from "react";
 import Page from "../page/Page";
 import "./form.css";
-import { Form as AntForm, Input, InputNumber, Button } from "antd";
+import { Form as AntForm, Input, Button } from "antd";
 import { useFormik } from "formik";
 import { Helmet } from "react-helmet";
 import Navbar from "../navbar/Navbar";
@@ -66,8 +66,9 @@ const Form = () => {
             ) : null}
           </AntForm.Item>
           <AntForm.Item>
-            <InputNumber
+            <Input
               name="budget"
+              type='number'
               min={0}
               placeholder="Event Budget GH₵"
               size="large"
@@ -78,8 +79,9 @@ const Form = () => {
             ) : null}
           </AntForm.Item>
           <AntForm.Item>
-            <InputNumber
+            <Input
               name="amount"
+              type='number'
               min={0}
               placeholder="Request Amount GH₵"
               size="large"
