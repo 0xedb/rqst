@@ -1,4 +1,4 @@
-.rqst-form {   
+.rqst-form {
   padding-top: 100px;
   position: relative;
   /* height: 100%; */
@@ -7,16 +7,22 @@
 
 #the-form {
   width: 90%;
-  max-width: 520px;;
+  max-width: 520px;
 }
 
-#the-form input, #the-form button, .ant-input-number {
+#the-form input,
+#the-form button,
+.ant-input-number {
   width: 100%;
   height: 50px;
 }
 
-@media(min-width: 920px) {
+@media (min-width: 920px) {
   .rqst-form {
     padding-top: 200px;
   }
+}
+
+.err {
+  color: crimson;
 }

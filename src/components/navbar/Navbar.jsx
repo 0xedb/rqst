@@ -8,7 +8,7 @@ const Navbar = ({ children }) => {
   return (
     <nav>
       <div className="logo">
-        <Link to="#">{LOGO}</Link>
+        <Link to="/">{LOGO}</Link>
       </div>
       {children}
     </nav>
