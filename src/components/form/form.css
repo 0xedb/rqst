@@ -1,5 +1,8 @@
 .rqst-form {   
-  padding-top: 20%;
+  padding-top: 100px;
+  position: relative;
+  /* height: 100%; */
+  background: inherit;
 }
 
 #the-form {
@@ -10,4 +13,10 @@
 #the-form input, #the-form button, .ant-input-number {
   width: 100%;
   height: 50px;
+}
+
+@media(min-width: 920px) {
+  .rqst-form {
+    padding-top: 200px;
+  }
 }

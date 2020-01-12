@@ -29,7 +29,11 @@ const Form = () => {
             />
           </AntForm.Item>
           <AntForm.Item>
-            <Input.TextArea placeholder="Funds Purpose" size="large" rows={10} />
+            <Input.TextArea
+              placeholder="Funds Purpose"
+              size="large"
+              rows={10}
+            />
           </AntForm.Item>
           <AntForm.Item>
             <Input
