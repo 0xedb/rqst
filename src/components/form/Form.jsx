@@ -119,7 +119,7 @@ const Form = () => {
             ) : null}
           </AntForm.Item>
           <AntForm.Item>
-            <Button size="large" htmlType="submit" onClick={handleSubmit}>
+            <Button type='primary' size="large" htmlType="submit" onClick={handleSubmit}>
               Submit
             </Button>
           </AntForm.Item>
