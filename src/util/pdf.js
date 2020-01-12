@@ -1,8 +1,3 @@
-// const pdfMake = require("pdfmake/build/pdfmake.js");
-// const pdfFonts = require("pdfmake/build/vfs_fonts.js");
-
-// pdfMake.vfs = pdfFonts.pdfMake.vfs;
-
 const PdfPrinter = require("pdfmake");
 const fs = require("fs");
 const path = require("path");
@@ -86,10 +81,12 @@ const makePDF = async ({ fullName, budget, amount, purpose, org }) => {
 
   const printer = new PdfPrinter(fonts);
   let pdfDoc = printer.createPdfKitDocument(docDefinition);
-  const file = path.join(os.tmpdir(), `__document_${date[1]}_${fullName}`);
+  const file = path.join(
+    os.tmpdir(),
+    `__document_${date[1]}_${fullName.split(" ")[0]}`
+  );
   pdfDoc.pipe(fs.createWriteStream(file));
   pdfDoc.end();
-  console.log(file);
   return file;
 };
 

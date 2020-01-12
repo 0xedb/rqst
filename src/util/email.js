@@ -1,23 +1,32 @@
 const nodemailer = require("nodemailer");
+if (process.env.RQST_ENV !== "production") {
+  require("dotenv").config();
+}
 
-const sendEmail = async () => {
-  let transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
-    port: 587,
-    secure: false,
-    auth: {
-      user: testAccount.user,
-      pass: testAccount.pass
-    }
+const CONFIG = {
+  host: process.env.RQST_SERVER,
+  port: process.env.RQST_PORT,
+  secure: true,
+  auth: {
+    user: process.env.RQST_USER,
+    pass: process.env.RQST_SECRET
+  }
+};
+
+const sendMail = async file => {
+  const transporter = nodemailer.createTransport({
+    ...CONFIG
   });
 
   let info = await transporter.sendMail({
-    from: '"Fred Foo 👻" <foo@example.com>',
-    to: "bar@example.com, baz@example.com",
-    subject: "Hello ✔",
+    from: '"Rqst App 👻" <fundus.flask@gmail.com>',
+    to: "fundus.flask@gmail.com",
+    subject: "Fund Request ✔",
     text: "Hello world?",
-    html: "<b>Hello world?</b>"
+    html: "<b>Hello world?</b>",
+    attachments: [{ filename: "Fund Request", path: file }]
   });
-
-  console.log("Message sent: %s", info.messageId);
+  console.log(info.messageId);
 };
+
+module.exports = sendMail;
