@@ -1,6 +1,9 @@
+const makePdf = require("../util/pdf");
+
 module.exports = (req, res) => {
-  if (req.method === "POST") {
-    console.log(req.body);
-    res.send(req.body);
+  makePdf(req.body);
+  if (req.method === "POST") { 
+    const { data } = req.body;
+    res.send(data);
   }
 };
