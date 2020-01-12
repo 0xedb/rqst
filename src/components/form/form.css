@@ -1,3 +1,13 @@
-.rqst-form { 
-  height: 100%; 
+.rqst-form {   
+  padding-top: 20%;
+}
+
+#the-form {
+  width: 90%;
+  max-width: 520px;;
+}
+
+#the-form input, #the-form button, .ant-input-number {
+  width: 100%;
+  height: 50px;
 }
