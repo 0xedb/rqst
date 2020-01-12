@@ -12,11 +12,13 @@
   },
   "dependencies": {
     "antd": "^3.26.5",
+    "dotenv": "^8.2.0",
     "firebase": "^7.6.1",
     "formik": "^2.1.1",
     "gatsby": "^2.18.21",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "lozad": "^1.14.0",
+    "nodemailer": "^6.4.2",
     "pdfmake": "^0.1.63",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
