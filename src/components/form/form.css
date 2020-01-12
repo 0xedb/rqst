@@ -1,5 +1,5 @@
 .rqst-form {
-  padding-top: 100px;
+  padding-top: 120px;
   position: relative;
   /* height: 100%; */
   background: inherit;
@@ -17,12 +17,21 @@
   height: 50px;
 }
 
+.err {
+  color: crimson;
+}
+
+.logout {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  padding: 5px 15px;
+  /* background: #b1b1b1; */
+  border-radius: 0;
+}
+
 @media (min-width: 920px) {
   .rqst-form {
     padding-top: 200px;
   }
-}
-
-.err {
-  color: crimson;
 }

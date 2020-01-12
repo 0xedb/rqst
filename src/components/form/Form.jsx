@@ -52,6 +52,9 @@ const Form = () => {
       </Helmet>
       <Navbar />
       <div className="rqst-form centered">
+        <Button className="logout" type="danger" size='large'>
+          logout
+        </Button>
         <form id="the-form">
           <AntForm.Item>
             <Input
@@ -68,7 +71,7 @@ const Form = () => {
           <AntForm.Item>
             <Input
               name="budget"
-              type='number'
+              type="number"
               min={0}
               placeholder="Event Budget GH₵"
               size="large"
@@ -81,7 +84,7 @@ const Form = () => {
           <AntForm.Item>
             <Input
               name="amount"
-              type='number'
+              type="number"
               min={0}
               placeholder="Request Amount GH₵"
               size="large"
