@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import Page from "../page/Page";
 import "./form.css";
-import { Form as AntForm, Input, Button } from "antd";
+import { Form as AntForm, Input, Button, message } from "antd";
 import { useFormik } from "formik";
 import { Helmet } from "react-helmet";
 import Navbar from "../navbar/Navbar";
 import { firebase } from "../../util/firebase";
 import CONFIG from "../../util/constants";
+import axios from "axios";
 
 const validate = async values => {
   const errors = {};
@@ -42,13 +43,29 @@ const Form = () => {
     },
     validate,
     onSubmit: async values => {
-      console.log(values);
+      console.dir(values)
+      const data = JSON.stringify({
+        ...values
+      }); 
+      axios({
+        method: "post",
+        url: process.env.RQST_URL,
+        headers: { "content-type": "application/x-www-form-urlencoded" },
+        data
+      });
     }
   });
 
   const handleSubmit = async event => {
     event.preventDefault();
-    formik.submitForm();
+    formik
+      .submitForm()
+      .then(() => {
+        // formik.resetForm();
+        message.success({ content: "request submitted", duration: 6 });
+      })
+      .then()
+      .catch(err => message.error({ content: err.message, duration: 6 }));
   };
   return (
     <Page>

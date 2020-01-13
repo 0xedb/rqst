@@ -13,13 +13,13 @@ const CONFIG = {
   }
 };
 
-const sendMail = async file => {
+const sendMail = async ({file, name, email}) => {
   const transporter = nodemailer.createTransport({
     ...CONFIG
   });
 
   let info = await transporter.sendMail({
-    from: '"Rqst App 👻" <fundus.flask@gmail.com>',
+    from: `"${name} 👻" <${email}>`,
     to: "fundus.flask@gmail.com",
     subject: "Fund Request ✔",
     text: "Hello world?",

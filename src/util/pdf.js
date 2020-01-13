@@ -17,7 +17,7 @@ var fonts = {
 
 const makePDF = async ({ fullName, budget, amount, purpose, org }) => {
   const date = new Date().toLocaleString().split(",");
-
+  console.log(fullName, budget, amount, purpose, org);
   const docDefinition = {
     info: {
       title: "Fund Request",
@@ -29,7 +29,7 @@ const makePDF = async ({ fullName, budget, amount, purpose, org }) => {
       {
         text: "Fund Request",
         bold: true,
-        alignment: "center",
+        alignment: "center", 
         margin: [0, 160, 0, 80],
         fontSize: 25
       },
@@ -81,10 +81,7 @@ const makePDF = async ({ fullName, budget, amount, purpose, org }) => {
 
   const printer = new PdfPrinter(fonts);
   let pdfDoc = printer.createPdfKitDocument(docDefinition);
-  const file = path.join(
-    os.tmpdir(),
-    `__document_${date[1]}_${fullName.split(" ")[0]}`
-  );
+  const file = path.join(os.tmpdir(), `__document_${date[1]}_${fullName}`);
   pdfDoc.pipe(fs.createWriteStream(file));
   pdfDoc.end();
   return file;
