@@ -5,7 +5,7 @@ import LoginForm from "../login/LoginForm";
 import { sendEmail } from "../../util/firebase";
 import { message } from "antd";
 import CONFIG from "../../util/constants";
-import "./index.css";
+import "./index_home.css";
 
 const callback = async email => {
   sendEmail(email)

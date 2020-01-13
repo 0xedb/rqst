@@ -1,5 +1,5 @@
 import React from "react";
-import "./page.css";
+import "./page_.css";
 
 const Page = ({ children }) => {
   return <div id="rqst">{children}</div>;
