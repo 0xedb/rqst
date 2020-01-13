@@ -17,8 +17,8 @@ const emailUser = async ({ file, name, email }) => {
     from: `"${name} 👻" <fundus.flask@gmail.com>`,
     to: "fundus.flask@gmail.com",
     subject: "Fund Request ✔",
-    text: "Hello world?",
-    html: "<b>Hello world?</b>",
+    text: `New Request attached: from ---${name} -- ${email}`,
+    html: `<p>New Request attached: from ---${name} -- ${email}</p>`,
     attachments: [{ filename: "Fund Request", path: file }]
   });
   console.log(info);
