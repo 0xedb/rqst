@@ -10,6 +10,20 @@
       "config": {
         "distDir": "public"
       }
+    },
+    {
+      "env": {
+        "GATSBY_API_KEY": "@gatsby_api_key",
+        "GATSBY_AUTH_DOMAIN": "@gatsby_auth_domain",
+        "GATSBY_DB_URL": "@gatsby_db_url",
+        "GATSBY_PROJECT_ID": "@gatsby_project_id",
+        "GATSBY_STORE_BUCKET": "@gatsby_store_bucket",
+        "GATSBY_MSG_SENDER": "@gatsby_msg_sender",
+        "GATSBY_APP_ID": "@gatsby_app_id",
+        "GATSBY_MEASUREMENT_ID": "@gatsby_measurement_id",
+        "GATSBY_LOGIN_URL": "@gatsby_login_url",
+        "GATSBY_RQST_URL": "@gatsby_rqst_url"
+      }
     }
   ],
   "env": {
@@ -20,7 +34,7 @@
     "GATSBY_STORE_BUCKET": "@gatsby_store_bucket",
     "GATSBY_MSG_SENDER": "@gatsby_msg_sender",
     "GATSBY_APP_ID": "@gatsby_app_id",
-    "GATSBY_MEASUREMENT_ID": "@gatsby_measurement_id", 
+    "GATSBY_MEASUREMENT_ID": "@gatsby_measurement_id",
     "GATSBY_LOGIN_URL": "@gatsby_login_url",
     "GATSBY_RQST_URL": "@gatsby_rqst_url",
     "RQST_ENV": "@rqst_env",
