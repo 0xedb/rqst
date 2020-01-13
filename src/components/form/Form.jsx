@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Page from "../page/Page";
 import "./form.css";
 import { Form as AntForm, Input, Button, message } from "antd";
@@ -30,9 +30,6 @@ const validate = async values => {
 };
 
 const Form = () => {
-  useEffect(() => {
-    window.localStorage.removeItem(CONFIG.user);
-  }, []);
   const formik = useFormik({
     initialValues: {
       fullName: "",
@@ -43,10 +40,11 @@ const Form = () => {
     },
     validate,
     onSubmit: async values => {
-      console.log("user--", firebase.auth().currentUser.email);
+      const email = window.localStorage.getItem(CONFIG.user);
+      window.localStorage.removeItem(CONFIG.user);
       const data = JSON.stringify({
         ...values,
-        email: firebase.auth().currentUser.email
+        email
       });
       axios.post(process.env.GATSBY_RQST_URL, data, {
         headers: { "content-type": "application/json" }

@@ -12,8 +12,7 @@ const callback = email => {
     .signInWithEmailLink(email, window.location.href)
     .then(() => {
       window.localStorage.setItem(CONFIG.user, btoa(email));
-      window.location.replace(window.location.href);
-      console.log("successful");
+      window.location.replace(window.location.href); 
     })
     .catch(err => message.error({ content: err.message, duration: 8 }));
 };
