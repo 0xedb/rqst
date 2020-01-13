@@ -12,7 +12,7 @@ const Home = () => {
       </Helmet>
       <Navbar />
       <Index />
-    </Page>
+    </Page> 
   );
 };
 
