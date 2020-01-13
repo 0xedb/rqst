@@ -42,22 +42,19 @@ const Form = () => {
       org: ""
     },
     validate,
-    onSubmit: async values => {
-      console.dir(values);
+    onSubmit: async values => { 
       const data = JSON.stringify({
-        ...values
+        ...values,
+        email: firebase.auth().currentUser.email
       });
-      axios({
-        method: "post",
-        url: process.env.GATSBY_RQST_URL,
-        headers: { "content-type": "application/x-www-form-urlencoded" },
-        data
+      axios.post(process.env.GATSBY_RQST_URL, data, {
+        headers: { "content-type": "application/json" }
       });
     }
   });
 
   const handleLogout = async () => {
-    firebase.auth().signOut(); 
+    firebase.auth().signOut();
     window.location.replace("/");
   };
 

@@ -3,8 +3,7 @@ import "firebase/analytics";
 import "firebase/auth";
 import CONFIG from "./constants";
 
-if (!firebase.apps.length) {
-  console.log(CONFIG.firebase);
+if (!firebase.apps.length) { 
   firebase.initializeApp(CONFIG.firebase);
 }
 

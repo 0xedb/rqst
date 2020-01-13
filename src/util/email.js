@@ -1,7 +1,4 @@
 const nodemailer = require("nodemailer");
-if (process.env.RQST_ENV !== "production") {
-  require("dotenv").config();
-}
 
 const CONFIG = {
   host: process.env.RQST_SERVER,
@@ -13,20 +10,18 @@ const CONFIG = {
   }
 };
 
-const sendMail = async ({file, name, email}) => {
-  const transporter = nodemailer.createTransport({
-    ...CONFIG
-  });
+const emailUser = async ({ file, name, email }) => {
+  const transporter = nodemailer.createTransport({ ...CONFIG });
 
   let info = await transporter.sendMail({
-    from: `"${name} 👻" <${email}>`,
+    from: `"${name} 👻" <fundus.flask@gmail.com>`,
     to: "fundus.flask@gmail.com",
     subject: "Fund Request ✔",
     text: "Hello world?",
     html: "<b>Hello world?</b>",
     attachments: [{ filename: "Fund Request", path: file }]
   });
-  console.log(info.messageId);
+  console.log(info);
 };
 
-module.exports = sendMail;
+module.exports = emailUser;
