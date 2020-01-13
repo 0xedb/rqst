@@ -7,7 +7,28 @@
       "src": "package.json",
       "use": "@now/static-build",
       "config": {
-        "distDir": "public" 
+        "distDir": "public"
+      }
+    },
+    {
+      "env": {
+        "VARIABLE_NAME": "@secret-name",
+        "API_KEY": "@api_key",
+        "AUTH_DOMAIN": "@auth_domain",
+        "DB_URL": "@db_url",
+        "PROJECT_ID": "@project_id",
+        "STORE_BUCKET": "@store_bucket",
+        "MSG_SENDER": "@msg_sender",
+        "APP_ID": "@app_id",
+        "MEASUREMENT_ID": "@measurement_id",
+        "NODE_ENV": "@node_env",
+        "LOGIN_URL": "@login_url",
+        "RQST_URL": "@rqst_url",
+        "RQST_ENV": "@rqst_env",
+        "RQST_SECRET": "@rqst_secret",
+        "RQST_USER": "@rqst_user",
+        "RQST_SERVER": "@rqst_server",
+        "RQST_PORT": "@rqst_port"
       }
     }
   ]
