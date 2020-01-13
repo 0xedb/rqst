@@ -11,7 +11,7 @@
         "distDir": "public"
       }
     },
-    {
+    
       "env": {
         "GATSBY_API_KEY": "@gatsby_api_key",
         "GATSBY_AUTH_DOMAIN": "@gatsby_auth_domain",
@@ -23,7 +23,7 @@
         "GATSBY_MEASUREMENT_ID": "@gatsby_measurement_id",
         "GATSBY_LOGIN_URL": "@gatsby_login_url",
         "GATSBY_RQST_URL": "@gatsby_rqst_url"
-      }
+      
     }
   ],
   "env": {
