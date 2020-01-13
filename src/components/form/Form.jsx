@@ -42,7 +42,7 @@ const Form = () => {
       org: ""
     },
     validate,
-    onSubmit: async values => { 
+    onSubmit: async values => {
       const data = JSON.stringify({
         ...values,
         email: firebase.auth().currentUser.email
@@ -65,8 +65,7 @@ const Form = () => {
       .then(() => {
         message.success({ content: "request submitted", duration: 6 });
       })
-      .then(() => 
-        formik.resetForm();
+      .then(() => formik.resetForm())
       .catch(err => message.error({ content: err.message, duration: 6 }));
   };
   return (
