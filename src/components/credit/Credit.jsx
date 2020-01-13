@@ -1,7 +1,5 @@
+import React from "react";
 import "./credit.css";
-import React from 'react';
- 
-
 
 const Credit = ({ href, desc }) => {
   return (

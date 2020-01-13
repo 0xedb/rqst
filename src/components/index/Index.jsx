@@ -1,11 +1,11 @@
+import React from "react";
 import { useLozad } from "../../hooks/lozad";
 import Credit from "../credit/Credit";
 import LoginForm from "../login/LoginForm";
-import "./index.css";
-import React from "react";
 import { sendEmail } from "../../util/firebase";
 import { message } from "antd";
 import CONFIG from "../../util/constants";
+import "./index.css";
 
 const callback = async email => {
   sendEmail(email)
