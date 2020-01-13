@@ -1,9 +1,14 @@
 {
   "name": "rqst",
   "version": 2,
-  "builds": [ 
-    { "src": "src/api/*.js", "use": "@now/node" },{
-      "src":"package.json", "use": "@now/static"
+  "builds": [
+    { "src": "src/api/*.js", "use": "@now/node" },
+    {
+      "src": "package.json",
+      "use": "@now/static",
+      "config": {
+        "distDir": "public" 
+      }
     }
   ]
 }

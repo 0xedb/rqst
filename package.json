@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "gatsby develop",
     "build": "gatsby build",
-    "start": "next start"
+    "now-build": "gatsby build"
   },
   "dependencies": {
     "antd": "^3.26.5",
