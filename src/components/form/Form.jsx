@@ -63,10 +63,10 @@ const Form = () => {
     formik
       .submitForm()
       .then(() => {
-        // formik.resetForm();
         message.success({ content: "request submitted", duration: 6 });
       })
-      .then()
+      .then(() => 
+        formik.resetForm();
       .catch(err => message.error({ content: err.message, duration: 6 }));
   };
   return (
