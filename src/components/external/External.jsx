@@ -11,7 +11,8 @@ const callback = email => {
   auth()
     .signInWithEmailLink(email, window.location.href)
     .then(() => {
-      window.localStorage.removeItem(CONFIG.user);
+      window.localStorage.setItem(CONFIG.user, btoa(email));
+      window.location.replace(window.location.href);
       console.log("successful");
     })
     .catch(err => message.error({ content: err.message, duration: 8 }));

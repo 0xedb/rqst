@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "antd": "^3.26.5",
+    "axios": "^0.19.1",
     "dotenv": "^8.2.0",
     "firebase": "^7.6.1",
     "formik": "^2.1.1",

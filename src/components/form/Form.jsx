@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Page from "../page/Page";
 import "./form.css";
 import { Form as AntForm, Input, Button } from "antd";
 import { useFormik } from "formik";
 import { Helmet } from "react-helmet";
 import Navbar from "../navbar/Navbar";
+import { firebase } from "../../util/firebase";
+import CONFIG from "../../util/constants";
 
 const validate = async values => {
   const errors = {};
@@ -27,6 +29,9 @@ const validate = async values => {
 };
 
 const Form = () => {
+  useEffect(() => {
+    window.localStorage.removeItem(CONFIG.user);
+  }, []);
   const formik = useFormik({
     initialValues: {
       fullName: "",
@@ -44,7 +49,6 @@ const Form = () => {
   const handleSubmit = async event => {
     event.preventDefault();
     formik.submitForm();
-    
   };
   return (
     <Page>
@@ -53,7 +57,7 @@ const Form = () => {
       </Helmet>
       <Navbar />
       <div className="rqst-form centered">
-        <Button className="logout" type="danger" size='large'>
+        <Button className="logout" type="danger" size="large">
           logout
         </Button>
         <form id="the-form">
@@ -120,7 +124,12 @@ const Form = () => {
             ) : null}
           </AntForm.Item>
           <AntForm.Item>
-            <Button type='primary' size="large" htmlType="submit" onClick={handleSubmit}>
+            <Button
+              type="primary"
+              size="large"
+              htmlType="submit"
+              onClick={handleSubmit}
+            >
               Submit
             </Button>
           </AntForm.Item>
