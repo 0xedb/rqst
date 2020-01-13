@@ -4,6 +4,7 @@ import "firebase/auth";
 import CONFIG from "./constants";
 
 if (!firebase.apps.length) {
+  console.log(CONFIG.firebase)
   firebase.initializeApp(CONFIG.firebase);
 }
 
