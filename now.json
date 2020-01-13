@@ -5,7 +5,7 @@
     { "src": "src/api/*.js", "use": "@now/node" },
     {
       "src": "package.json",
-      "use": "@now/static",
+      "use": "@now/static-build",
       "config": {
         "distDir": "public" 
       }
