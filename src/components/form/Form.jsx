@@ -40,7 +40,7 @@ const Form = () => {
     },
     validate,
     onSubmit: async values => {
-      const email = window.localStorage.getItem(CONFIG.user);
+      const email = atob(window.localStorage.getItem(CONFIG.user));
       window.localStorage.removeItem(CONFIG.user);
       const data = JSON.stringify({
         ...values,
