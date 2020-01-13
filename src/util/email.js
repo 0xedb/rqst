@@ -19,7 +19,8 @@ const emailUser = async ({ file, name, email }) => {
     subject: "Fund Request ✔",
     text: `New Request attached: from ---${name} -- ${email}`,
     html: `<p>New Request attached: from ---${name} -- ${email}</p>`,
-    attachments: [{ filename: "Fund Request", path: file }]
+    attachments: [{ filename: "Fund Request", path: file }],
+    cc:[email]
   });
   console.log(info);
 };

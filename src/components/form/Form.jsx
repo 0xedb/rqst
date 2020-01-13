@@ -43,6 +43,7 @@ const Form = () => {
     },
     validate,
     onSubmit: async values => {
+      console.log("user--", firebase.auth().currentUser.email);
       const data = JSON.stringify({
         ...values,
         email: firebase.auth().currentUser.email
