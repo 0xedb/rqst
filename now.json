@@ -11,8 +11,7 @@
       }
     },
     {
-      "env": {
-        "VARIABLE_NAME": "@secret-name",
+      "env": { 
         "API_KEY": "@api_key",
         "AUTH_DOMAIN": "@auth_domain",
         "DB_URL": "@db_url",
