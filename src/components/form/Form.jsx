@@ -43,10 +43,10 @@ const Form = () => {
     },
     validate,
     onSubmit: async values => {
-      console.dir(values)
+      console.dir(values);
       const data = JSON.stringify({
         ...values
-      }); 
+      });
       axios({
         method: "post",
         url: process.env.RQST_URL,
@@ -55,6 +55,11 @@ const Form = () => {
       });
     }
   });
+
+  const handleLogout = async () => {
+    firebase.auth().signOut(); 
+    window.location.replace("/");
+  };
 
   const handleSubmit = async event => {
     event.preventDefault();
@@ -74,7 +79,12 @@ const Form = () => {
       </Helmet>
       <Navbar />
       <div className="rqst-form centered">
-        <Button className="logout" type="danger" size="large">
+        <Button
+          onClick={handleLogout}
+          className="logout"
+          type="danger"
+          size="large"
+        >
           logout
         </Button>
         <form id="the-form">
