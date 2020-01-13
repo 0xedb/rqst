@@ -4,12 +4,11 @@ import "firebase/auth";
 import CONFIG from "./constants";
 
 if (!firebase.apps.length) {
-  console.log(CONFIG.firebase)
-  firebase.initializeApp(CONFIG.firebase);
+  console.log(CONFIG.firebase) 
 }
 
 const settings = {
-  url: process.env.LOGIN_URL,
+  url: process.env.GATSBY_LOGIN_URL, 
   handleCodeInApp: true
 };
 
@@ -18,3 +17,4 @@ const sendEmail = email => {
 };
 
 export { sendEmail, firebase };
+ 

@@ -49,7 +49,7 @@ const Form = () => {
       });
       axios({
         method: "post",
-        url: process.env.RQST_URL,
+        url: process.env.GATSBY_RQST_URL,
         headers: { "content-type": "application/x-www-form-urlencoded" },
         data
       });

@@ -7,13 +7,13 @@ export default {
     init: Symbol("init")
   },
   firebase: {
-    apiKey: process.env.API_KEY,
-    authDomain: process.env.AUTH_DOMAIN,
-    databaseURL: process.env.DB_URL,
-    projectId: process.env.PROJECT_ID,
-    storageBucket: process.env.STORE_BUCKET,
-    messagingSenderId: process.env.MSG_SENDER,
-    appId: process.env.APP_ID,
-    measurementId: process.env.MEASUREMENT_ID
+    apiKey: process.env.GATSBY_API_KEY,
+    authDomain: process.env.GATSBY_AUTH_DOMAIN,
+    databaseURL: process.env.GATSBY_DB_URL,
+    projectId: process.env.GATSBY_PROJECT_ID,
+    storageBucket: process.env.GATSBY_STORE_BUCKET,
+    messagingSenderId: process.env.GATSBY_MSG_SENDER,
+    appId: process.env.GATSBY_APP_ID,
+    measurementId: process.env.GATSBY_MEASUREMENT_ID
   }
 };
