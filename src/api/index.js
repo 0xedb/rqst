@@ -3,13 +3,10 @@ const sendMail = require("../util/email");
 
 module.exports = (req, res) => {
   // let data = JSON.parse(req.body);
-  let dd = JSON.parse(
-    JSON.stringify(req.body)
-      .replace(`: ''`, "")
-      .split(",")
-  );
+  // let dd = JSON.parse(JSON.stringify(req.body));
+  res.send("hello");
   console.log("\n", req.body);
-  
+
   // console.log(dd);
   // const { fullName, amount, budget, org, purpose, email } = JSON.parse(
   //   req.body

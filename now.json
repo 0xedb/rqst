@@ -1,6 +1,7 @@
 {
   "name": "rqst",
   "version": 2,
+  "routes": [{ "src": "/api", "dest": "src/api/index.js" }],
   "builds": [
     { "src": "src/api/*.js", "use": "@now/node" },
     {
