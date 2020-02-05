@@ -15,12 +15,12 @@ const emailUser = async ({ file, name, email }) => {
 
   let info = await transporter.sendMail({
     from: `"${name} 👻" <fundus.flask@gmail.com>`,
-    to: `${RQST_RECEIVER}`,
+    to: `${process.env.RQST_RECEIVER}`,
     subject: "Fund Request ✔",
     text: `New Request attached: from ---${name} -- ${email}`,
     html: `<p>New Request attached: from ---${name} -- ${email}</p>`,
     attachments: [{ filename: "Fund Request", path: file }],
-    cc: [email, `${RQST_USER}`]
+    cc: [email, `${process.env.RQST_USER}`]
   });
   console.log(info);
 };
