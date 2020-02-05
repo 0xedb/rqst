@@ -14,7 +14,7 @@ const emailUser = async ({ file, name, email }) => {
   const transporter = nodemailer.createTransport({ ...CONFIG });
 
   let info = await transporter.sendMail({
-    from: `"${name} 👻" <fundus.flask@gmail.com>`,
+    from: `"Fund Request: ${name} 👻" <fundus.flask@gmail.com>`,
     to: `${process.env.RQST_RECEIVER}`,
     subject: "Fund Request ✔",
     text: `New Request attached: from ---${name} -- ${email}`,
